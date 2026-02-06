@@ -15,6 +15,7 @@ pipeline {
         stage('SCM Checkout') {
             steps {
                 echo 'cloning code base to jenkins server'
+                echo 'testing CICD pipeline using jenkinsfile'
                 git branch: 'main', credentialsId: '97c2abc2-8422-403c-9790-cb4ffc8acdfe', url: 'https://github.com/wokia23/aircanada_aws_vpc.git'
                 sh 'ls'
             }
